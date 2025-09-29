@@ -43,7 +43,7 @@ if (CMAKE_PROJECT_NAME STREQUAL PROFINET)
   message(STATUS "Building for ${CMAKE_SYSTEM_NAME}")
 endif()
 
-include(AddOsal)
+# include(AddOsal)
 include(GenerateExportHeader)
 include(CMakeDependentOption)
 include(GetGitRevision)
@@ -223,6 +223,7 @@ install (FILES
 
 add_subdirectory (src)
 add_subdirectory (sample_app)
+add_subdirectory (osal)
 
 if (CMAKE_PROJECT_NAME STREQUAL PROFINET AND BUILD_TESTING)
   add_subdirectory (test)

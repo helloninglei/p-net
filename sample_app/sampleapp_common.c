@@ -232,7 +232,12 @@ static int app_connect_ind (
     *  This is a very simple application which does not need to handle anything.
     *  All the needed information is in the AR data structure.
     */
-
+   // 添加更多调试信息
+   APP_LOG_DEBUG ("Connect result - Error code: %d, Error decode: %d, Error code 1: %d, Error code 2: %d\n",
+                  p_result->pnio_status.error_code,
+                  p_result->pnio_status.error_decode,
+                  p_result->pnio_status.error_code_1,
+                  p_result->pnio_status.error_code_2);
    return 0;
 }
 

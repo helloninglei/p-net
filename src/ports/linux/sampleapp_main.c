@@ -290,7 +290,7 @@ void app_set_led (uint16_t id, bool led_state)
 
    char id_str[7] = {0}; /** Terminated string */
    const char * argv[4];
-
+   printf("app_set_led set_profinet_ledsled_state: %u\n", led_state);
    sprintf (id_str, "%u", id);
    id_str[sizeof (id_str) - 1] = '\0';
 
