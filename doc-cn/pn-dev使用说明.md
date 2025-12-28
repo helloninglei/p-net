@@ -2,8 +2,13 @@
 
 ## 基本用法
 
+编译依赖库：
+git clone --recurse-submodules https://github.com/rtlabs-com/osal.git
+cd osal && mkdir build && cd build && cmake .. && make
+
 ### 0.编译
 ```bash
+cd p-net && mkdir build && cd build
 cmake .. -DLOG_LEVEL_VALUES=DEBUG -DUSE_SCHED_FIFO=ON -DUSE_SCHED_FIFO=ON
 make 
 ```
